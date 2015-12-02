@@ -1,4 +1,5 @@
 ![alt tag](https://raw.githubusercontent.com/Rulox/codefett/develop/codefett/assets/images/logo_small.png)
+[![Coverage Status](https://coveralls.io/repos/Rulox/codefett/badge.svg?branch=master&service=github)](https://coveralls.io/github/Rulox/codefett?branch=develop)
 -------
 Web application for automatic testing codes from students
 
