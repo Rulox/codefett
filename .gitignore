@@ -1,2 +1,11 @@
+#IDE
 .idea
+
+#Frontend
 node_modules
+bower_components
+
+#Django
+*.sqlite
+*.sqlite3
+static

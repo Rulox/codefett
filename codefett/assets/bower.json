@@ -1,0 +1,40 @@
+{
+  "name": "Codefett",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Raul Marrero"
+  ],
+  "license": "AGPL",
+  "homepage": "https://github.com/Rulox/codefett",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6"
+  },
+  "exportsOverride": {
+    "bootstrap-*": { 
+      "js": "**/*.js",
+      "css": "**/*.css"
+    },
+    "angular-*": { 
+      "js": "**/*.js",
+      "css": "**/*.css"
+    },
+    "jquery-*": { 
+      "js": "**/*.js",
+      "css": "**/*.css"
+    }
+  }
+}
