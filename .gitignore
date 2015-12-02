@@ -9,4 +9,6 @@ bower_components
 #Django
 *.sqlite
 *.sqlite3
+*.pyc
+.coverage
 static
