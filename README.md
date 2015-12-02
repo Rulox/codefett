@@ -1,8 +1,9 @@
-# Codafett
+![alt tag](https://raw.githubusercontent.com/Rulox/codefett/develop/codefett/assets/images/logo_small.png)
+-------
 Web application for automatic testing codes from students
+![alt tag](http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
 # Description
 # Plugins
-# License
 # Credits
 
 # Dependencies (WIP)

@@ -4,6 +4,7 @@
 #Frontend
 node_modules
 bower_components
+.sass*
 
 #Django
 *.sqlite
