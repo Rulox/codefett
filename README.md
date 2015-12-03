@@ -1,9 +1,9 @@
 ![alt tag](https://raw.githubusercontent.com/Rulox/codefett/develop/codefett/assets/images/logo_small.png)
-[![Coverage Status](https://coveralls.io/repos/Rulox/codefett/badge.svg?branch=develop&service=github)](https://coveralls.io/github/Rulox/codefett?branch=develop)
+
+[![Build Status](https://travis-ci.org/Rulox/codefett.svg)](https://travis-ci.org/Rulox/codefett) [![Coverage Status](https://coveralls.io/repos/Rulox/codefett/badge.svg?branch=develop&service=github)](https://coveralls.io/github/Rulox/codefett?branch=develop)
 -------
 Web application for automatic testing codes from students
 
-![alt tag](http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
 # Description
 # Plugins
 # Credits
@@ -21,6 +21,8 @@ are different dependencies if you are going to work in the backend or in the fro
 * Sass
 * Compass
 * Nodejs (npm)
+
+![alt tag](http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
 
 Raúl Marrero Rodríguez
 Universidad de La Laguna - Tenerife, Spain
