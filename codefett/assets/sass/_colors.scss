@@ -1,14 +1,15 @@
 /* Codefett Colors */
 
-$color_blue_dark: #2B2D42;
-$color_blue_light: #8D99AE;
-$color_background: #EDF2F4;
-$color_red_dark: #D90429;
-$color_red_light: #EF233C;
+// Main color palette of Codefett.
+$blue_dark: #2B2D42;
+$blue_light: #8D99AE;
+$background: #EDF2F4;
+$red_dark: #D90429;
+$red_light: #EF233C;
 
 /* Make some more readable variables */
 
 $color_navbar:#000000;
-$color_link:$color_red_dark;
-$color_border:$color_blue_light;
-$color_dashboard:$color_blue_dark;
+$color_link: $red_dark;
+$color_border: $blue_light;
+$color_dashboard: $blue_dark;
