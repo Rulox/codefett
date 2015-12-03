@@ -10,4 +10,5 @@ script:
     coverage run --source='./codefett/' ./codefett/manage.py test
 
 after_success:
+    coverage report
     coveralls
