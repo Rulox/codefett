@@ -7,9 +7,16 @@ $background: #EDF2F4;
 $red_dark: #D90429;
 $red_light: #EF233C;
 
+
+
 /* Make some more readable variables */
 
 $color_navbar: #FFF;
 $color_link: $red_dark;
 $color_border: $blue_light;
 $color_dashboard: $blue_dark;
+$btn: $red_dark;
+
+
+/* Variations */
+$btn_hover: lighten($btn, 5%);

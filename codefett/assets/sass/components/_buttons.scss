@@ -1,0 +1,26 @@
+.btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.btn-primary {
+    color: #FFF;
+    background-color: $btn;
+    border-color: $btn;
+}
+
+.btn-primary:hover {
+    background-color: $btn_hover;
+    border-color: $btn;
+}
+
+.btn-primary:active, .btn-primary:focus {
+    background-color: $btn_hover;
+    border-color: $btn;
+}
+
+.btn-browse {
+  padding: 13px 18px;
+  font-size: 24px;
+  font-weight: 200;
+}

@@ -1,11 +1,23 @@
 /* IMPORT SASS MODULES */
 @import 'colors';
-@import 'navbar';
 @import 'home';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/navbar';
 
 /* GENERAL */
 html,
 body {
   background-color: $background;
   font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: $color_link;
+}
+
+a:hover {
+  color: $red_light;
 }

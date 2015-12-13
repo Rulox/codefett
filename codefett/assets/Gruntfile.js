@@ -117,11 +117,11 @@ module.exports = function(grunt) {
                     destPrefix: '../static/fonts'
                 },
                 files: {
-                    'glyphicons-halflings-regular.ttf': 'bootstrap/dist/fonts/glyphicons-halflings-regular.ttf'
+                    '': 'bootstrap/dist/fonts/*'
                 }
             },
             // Images
-            fonts: {
+            images: {
                 options: {
                     destPrefix: '../static/images'
                 },
