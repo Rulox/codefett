@@ -1,9 +1,11 @@
 /* IMPORT SASS MODULES */
 @import 'colors';
 @import 'navbar';
+@import 'home';
 
 /* GENERAL */
 html,
 body {
   background-color: $background;
+  font-family: 'Roboto', sans-serif;
 }

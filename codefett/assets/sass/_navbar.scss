@@ -3,19 +3,18 @@
 }
 
 .navbar {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .navbar-default {
   background-color: $color_navbar;
   border: 0;
   border-bottom: 1px solid $color_border;
-
 }
 
 .navbar-brand {
   img {
     height: 30px !important;
-    margin-top: -7px;
+    margin-top: -5px;
   }
 }
