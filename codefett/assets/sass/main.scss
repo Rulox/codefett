@@ -1,8 +1,9 @@
+/* IMPORT SASS MODULES */
+@import 'colors';
+@import 'navbar';
+
 /* GENERAL */
 html,
 body {
-  background-color:white;
+  background-color: $background;
 }
-
-/* IMPORT SASS MODULES */
-@import 'colors';

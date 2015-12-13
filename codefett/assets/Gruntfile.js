@@ -138,7 +138,7 @@ module.exports = function(grunt) {
                     './sass/**/*.scss',
                     './js/**/*.js'
                 ],
-                tasks: ['concat', 'uglify']
+                tasks: ['compass:dev', 'concat', 'uglify']
             }
         }
  
@@ -155,6 +155,6 @@ module.exports = function(grunt) {
 
  
     // Default task.
-    grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'concat', 'uglify', 'bowercopy']);
+    grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'concat', 'uglify', 'bowercopy', 'watch']);
  
 };
