@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # External apps
+    'rest_framework',
+    'django_extensions',
     # Codefett APPs
     'common',
     'users',
@@ -127,3 +130,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+# Using our custom user model
+AUTH_USER_MODEL = 'users.CFUser'
