@@ -25,7 +25,11 @@ module.exports = function(grunt) {
                 separator: '\n'
             },
             dist: {
-                src: ['./js/**/*.js'],
+                src: [
+                    './js/*.js',
+                    './js/app/app.js',
+                    './js/**/*.js'
+                ],
                 dest: '../static/js/main.js'
             }
         },
@@ -40,6 +44,9 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '../static/js/main.min.js': '../static/js/main.js'
+                },
+                options: {
+                    mangle: false
                 }
             }
         },
@@ -127,6 +134,15 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '': '../images/*'
+                }
+            },
+            // Angular HTML Views 
+            angular_templates: {
+                options: {
+                    destPrefix: '../static/js/views'
+                },
+                files: {
+                    '': '../js/views/*'
                 }
             }
         },
