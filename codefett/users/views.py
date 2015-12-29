@@ -1,75 +1,77 @@
-import json
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.utils.translation import ugettext as _
-from rest_framework import status, permissions, viewsets
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from django.views.generic import View
+from braces.views import AjaxResponseMixin, JsonRequestResponseMixin
+from braces.views import CsrfExemptMixin  # FIXME: Delete this import, it wont be used anymore
 from .models import CFUser
-from .serializers import CFUserSerializer
-from .permissions import IsAccountOwner
 
 
-class CFUserViewSet(viewsets.ModelViewSet):
-    lookup_field = 'id'
-    queryset = CFUser.objects.all()
-    serializer_class = CFUserSerializer
-
-    def get_permissions(self):
-        if self.request.method in permissions.SAFE_METHODS:
-            return permissions.AllowAny(),
-
-        if self.request.method == 'POST':
-            return permissions.AllowAny(),
-
-        return permissions.IsAuthenticated(), IsAccountOwner()
-
-    def create(self, request, *args, **kwargs):
-        serializer = self.serializer_class(data=request.data)
-
-        if serializer.is_valid():
-            CFUser.objects.create_user(**serializer.validated_data)
-
-            return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
-
-        return Response({
-            'status': 'Bad request',
-            'message': 'Account could not be created with received data'
-        }, status=status.HTTP_400_BAD_REQUEST)
-
-
-class LoginView(APIView):
+class RegisterView(CsrfExemptMixin, JsonRequestResponseMixin, AjaxResponseMixin, View):
     """
-    Basic Login View via Ajax.
+    Basic registration view.
+    """
+    require_json = True
+
+    def post_ajax(self, request, *args, **kwargs):
+        full_name = self.request_json.get('full_name')
+        email = self.request_json.get('email')
+        pass1 = self.request_json.get('password1')
+        pass2 = self.request_json.get('password2')
+
+        if not full_name or not email or not pass1 or not pass2:
+            return self.render_bad_request_response(
+                {u'message': _(u'Please complete fields marked with *.')}
+            )
+
+        if pass1 != pass2:
+            return self.render_bad_request_response(
+                {u'message': _(u'Your passwords does not match.')}
+            )
+
+        # Create the user with our custom Manager
+        CFUser.objects.create_user(email, pass1)
+
+        return self.render_json_response(
+            {u'message': _(u'Your account has been created.')}
+        )
+
+
+class LoginView(CsrfExemptMixin, JsonRequestResponseMixin, AjaxResponseMixin, View):
+    """
+    Basic Login View. We will only implement the post_ajax method from
+    AjaxResponseMixin.
     """
 
-    def post(self, request, format=None):
-        data = json.loads(request.body)
+    require_json = True
 
-        email = data.get('email', None)
-        password = data.get('password', None)
+    def post_ajax(self, request, *args, **kwargs):
+
+        email = self.request_json.get('email')
+        password = self.request_json.get('password')
 
         if not email and password:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+            return self.render_bad_request_response(
+                {u'message': _(u'You must introduce your email and password.')}
+            )
 
         account = authenticate(email=email, password=password)
 
         if account is not None:
             login(request, account)
 
-            serialized = CFUserSerializer(account)
-
-            return Response(serialized.data)
+            return self.render_json_response(
+                {u'message': _(u'You have been logged in successfully.')}
+            )
         else:
-            return Response(
-                {'message': _('Username/password combination invalid.')},
-                status=status.HTTP_401_UNAUTHORIZED
+            return self.render_bad_request_response(
+                {u'message': _(u'Invalid username/password, try again.')}
             )
 
 
-class RegisterView(APIView):
+class LogoutView(CsrfExemptMixin, AjaxResponseMixin, View):
     """
-    Basic registration view, also via Ajax. We have an easy User model `CFUser`, so we don't need to
-    ask for many information to the user.
+        Basic Logout View.
     """
-    pass
+    def get_ajax(self, request, *args, **kwargs):
+        raise NotImplementedError

@@ -17,19 +17,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from common.views import HomeView
-from rest_framework import routers
-from users.views import CFUserViewSet
-
-
-# Register Rest Framework API routers
-router = routers.SimpleRouter()
-router.register(r'auth', CFUserViewSet)
 
 urlpatterns = [
-    # API URLs
-    url(r'^api/', include(router.urls)),
-
     # CodeFett URLS
     url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^auth/', include('users.urls', namespace='auth')),
+
     url(r'^admin/', admin.site.urls)
 ]
