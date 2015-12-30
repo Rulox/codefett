@@ -22,7 +22,7 @@ class CFUserManager(BaseUserManager):
     def create_superuser(self, email, password, **kwargs):
         account = self.create_user(email, password, **kwargs)
 
-        account.is_superuser = True
+        account.is_admin = True
         account.save()
 
         return account
