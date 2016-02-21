@@ -5,6 +5,12 @@
 Web application for automatic testing codes from students
 
 # Description
+## English
+Tool that allows users to upload tests and/or programming activities. The application will correct and return some feedback and a realtime calification for the students. Users can create/manage courses and prepare them for the students to upload code.
+
+## Spanish
+Prototipo de una herramienta que permita la entrega de actividades o prácticas, su testeo y su posterior calificación.
+
 # Plugins
 # Credits
 
