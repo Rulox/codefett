@@ -3,20 +3,39 @@
   -moz-border-radius: 0;
   border-radius: 0;
 }
+
 .btn-primary {
-    color: #FFF;
-    background-color: $btn;
-    border-color: $btn;
+  color: #FFF;
+  background-color: $btn;
+  border-color: $btn;
+}
+
+.btn-register {
+  @extend .btn-primary;
+  background-color: $blue_dark;
+  border-color: $blue_dark;
+}
+
+.btn-register:hover {
+  background-color: $btn_register_hover !important;
+  border-color: $blue_dark !important;
+  color: white !important;
 }
 
 .btn-primary:hover {
-    background-color: $btn_hover;
-    border-color: $btn;
+  background-color: $btn_hover;
+  border-color: $btn;
+}
+
+.btn-register:active, .btn-register:focus {
+  background-color: $btn_register_hover !important;
+  border-color: $blue_dark !important;
+  color: white !important;
 }
 
 .btn-primary:active, .btn-primary:focus {
-    background-color: $btn_hover;
-    border-color: $btn;
+  background-color: $btn_hover;
+  border-color: $btn;
 }
 
 .btn-browse {

@@ -135,7 +135,7 @@ module.exports = function(grunt) {
                 files: {
                     '': '../images/*'
                 }
-            },
+            },/*
             // Angular HTML Views 
             angular_templates: {
                 options: {
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
                 files: {
                     '': '../js/views/*'
                 }
-            }
+            }*/
         },
 
         // Watcher

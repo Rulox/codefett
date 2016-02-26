@@ -6,7 +6,7 @@
 {% block body %}
     <div class="container-fluid cf-container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-4 col-md-offset-4 cf-panel">
                 <form>
                     <fieldset class="form-group">
                         <label for="email">{% trans 'Email address' %}</label>
@@ -17,6 +17,17 @@
                         <label for="password">{% trans 'Password' %}</label>
                         <input type="password" class="form-control" id="password" placeholder="{% trans 'Password' %}">
                     </fieldset>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" href="#">
+                            <span aria-hidden="true" class="glyphicon glyphicon-user"></span>
+                            {% trans 'Login' %}
+                        </button>
+
+                        <button type="button" class="btn btn-register" href="#">
+                            <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span>
+                            {% trans 'Register' %}
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
