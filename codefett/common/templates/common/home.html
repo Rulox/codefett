@@ -4,54 +4,56 @@
 {% block title %}{% trans 'Home' %}{% endblock title %}
 
 {% block body %}
-    <div class="container-fluid cf-container">
-        <div class="cf-header">
-            <div class="header-black">
-                <div class="slogan">{% trans 'Automatic code testing for teachers and students.' %}</div>
-                <div class="stats">
-                    <strong>0</strong> {% trans 'Courses' %}
-                </div>
-                <button type="button" class="btn btn-primary btn-browse" href="#">
-                    <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
-                    {% trans 'Browse courses' %}
-                </button>
-                <div class="create">
-                    {% trans 'or, if you are a teacher,' %}
-                    &nbsp;<a href="#"><strong>{% trans 'create a new course.' %}</strong></a>
+    <div class="app" ng-controller="MainController">
+        <div class="container-fluid cf-container">
+            <div class="cf-header">
+                <div class="header-black">
+                    <div class="slogan">{% trans 'Automatic code testing for teachers and students.' %}</div>
+                    <div class="stats">
+                        <strong>0</strong> {% trans 'Courses' %}
+                    </div>
+                    <button type="button" class="btn btn-primary btn-browse">
+                        <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
+                        {% trans 'Browse courses' %}
+                    </button>
+                    <div class="create">
+                        {% trans 'or, if you are a teacher,' %}
+                        &nbsp;<a href="#"><strong>{% trans 'create a new course.' %}</strong></a>
+                    </div>
                 </div>
             </div>
+
         </div>
+        <div class="container">
+        <h2>What is Codefett?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mi commodo, luctus nisl ut, vestibulum neque.
+                Suspendisse viverra accumsan luctus. Curabitur id nisi cursus risus luctus pellentesque vitae vel libero.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Nunc non libero varius, volutpat diam viverra, aliquet metus. Maecenas quis sollicitudin nisi, at cursus nulla.
+                Vivamus maximus a libero nec efficitur. Aliquam nisl turpis, imperdiet quis orci nec, commodo rhoncus sapien.
+                Morbi sit amet placerat lectus. Duis suscipit nibh pretium diam bibendum, et interdum leo fermentum.
+                Cras pretium mauris a elit venenatis sagittis. Integer non bibendum augue.
+                Pellentesque vel risus ultrices nunc lobortis blandit.
+            </p>
 
-    </div>
-    <div class="container">
-    <h2>What is Codefett?</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mi commodo, luctus nisl ut, vestibulum neque.
-            Suspendisse viverra accumsan luctus. Curabitur id nisi cursus risus luctus pellentesque vitae vel libero.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Nunc non libero varius, volutpat diam viverra, aliquet metus. Maecenas quis sollicitudin nisi, at cursus nulla.
-            Vivamus maximus a libero nec efficitur. Aliquam nisl turpis, imperdiet quis orci nec, commodo rhoncus sapien.
-            Morbi sit amet placerat lectus. Duis suscipit nibh pretium diam bibendum, et interdum leo fermentum.
-            Cras pretium mauris a elit venenatis sagittis. Integer non bibendum augue.
-            Pellentesque vel risus ultrices nunc lobortis blandit.
-        </p>
+        <h2>Why is it free?</h2>
+            <p>
+                Nunc non libero varius, volutpat diam viverra, aliquet metus. Maecenas quis sollicitudin nisi, at cursus nulla.
+                Vivamus maximus a libero nec efficitur. Aliquam nisl turpis, imperdiet quis orci nec, commodo rhoncus sapien.
+                Morbi sit amet placerat lectus. Duis suscipit nibh pretium diam bibendum, et interdum leo fermentum.
+                Cras pretium mauris a elit venenatis sagittis. Integer non bibendum augue.
+                Pellentesque vel risus ultrices nunc lobortis blandit.
+            </p>
 
-    <h2>Why is it free?</h2>
-        <p>
-            Nunc non libero varius, volutpat diam viverra, aliquet metus. Maecenas quis sollicitudin nisi, at cursus nulla.
-            Vivamus maximus a libero nec efficitur. Aliquam nisl turpis, imperdiet quis orci nec, commodo rhoncus sapien.
-            Morbi sit amet placerat lectus. Duis suscipit nibh pretium diam bibendum, et interdum leo fermentum.
-            Cras pretium mauris a elit venenatis sagittis. Integer non bibendum augue.
-            Pellentesque vel risus ultrices nunc lobortis blandit.
-        </p>
-
-    <h2>How do I contribute?</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mi commodo, luctus nisl ut, vestibulum neque.
-            Suspendisse viverra accumsan luctus. Curabitur id nisi cursus risus luctus pellentesque vitae vel libero.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Nunc non libero varius, volutpat diam viverra, aliquet metus. Maecenas quis sollicitudin nisi, at cursus nulla.
-            Vivamus maximus a libero nec efficitur. Aliquam nisl turpis, imperdiet quis orci nec, commodo rhoncus sapien.
-        </p>
+        <h2>How do I contribute?</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et mi commodo, luctus nisl ut, vestibulum neque.
+                Suspendisse viverra accumsan luctus. Curabitur id nisi cursus risus luctus pellentesque vitae vel libero.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Nunc non libero varius, volutpat diam viverra, aliquet metus. Maecenas quis sollicitudin nisi, at cursus nulla.
+                Vivamus maximus a libero nec efficitur. Aliquam nisl turpis, imperdiet quis orci nec, commodo rhoncus sapien.
+            </p>
+        </div>
     </div>
 {% endblock body %}
