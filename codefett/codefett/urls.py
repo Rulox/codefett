@@ -21,8 +21,6 @@ from common.views import HomeView, LoginView
 urlpatterns = [
     # CodeFett URLS
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^login/$', LoginView.as_view(), name='login_view'),  # Login template
-
     url(r'^auth/', include('users.urls', namespace='auth')),
 
     url(r'^admin/', admin.site.urls)

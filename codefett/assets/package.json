@@ -12,6 +12,8 @@
     "grunt-contrib-concat": "~0.5.1",
     "grunt-contrib-uglify": "~0.11.0",
     "grunt-run": "~0.5.2",
-    "grunt-bowercopy": "~1.2.3"
+    "grunt-bowercopy": "~1.2.3",
+    "grunt-babel": "^5.0.0",
+    "babel": "^5.1.8"
   }
 }
