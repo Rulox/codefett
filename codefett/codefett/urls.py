@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from common.views import HomeView, LoginView
+from common.views import HomeView
 
 urlpatterns = [
     # CodeFett URLS
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^auth/', include('users.urls', namespace='auth')),
+    url(r'^users/', include('users.urls', namespace='auth')),
 
     url(r'^admin/', admin.site.urls)
 ]

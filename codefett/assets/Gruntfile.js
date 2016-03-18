@@ -11,6 +11,9 @@ module.exports = function(grunt) {
             },
             bower: {
                 exec: 'bower install'
+            },
+            after_build: {
+                exec: 'rm -rf ./build/' // Compiled files from ES6 to ES5
             }
         },
 
@@ -19,26 +22,12 @@ module.exports = function(grunt) {
          * 
          */
 
-        // Concatenate JS files into main.js
-        concat: {
-            options: {
-                separator: '\n'
-            },
-            dist: {
-                src: [
-                    './js/app.js',
-                    './js/**/*.js'
-                ],
-                dest: '../static/js/main.js'
-            }
-        },
-
         // Uglify JS files
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
                         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-                        '* Copyright (c) <%= grunt.template.today("yyyy") %> */',
+                        '* Copyright (c) <%= grunt.template.today("yyyy") %> \n*/',
             },
             dist: {
                 files: {
@@ -49,6 +38,34 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        // Transpile to ES5 JS
+        babel: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    ext: '.js',
+                    src: './js/**/*.js',
+                    dest: './build/'
+                }]
+            }
+        },
+
+        browserify: {
+            dist: {
+               options: {
+                  transform: [
+                     ["babelify", {presets: ["es2015"] }]
+                  ]
+               },
+               files: {
+                  "../static/js/main.js": ["./js/app.js"]
+               }
+            }
+         },
 
         // Check JS Syntax!
         jshint: {
@@ -103,8 +120,6 @@ module.exports = function(grunt) {
                     'bootstrap.min.js': 'bootstrap/dist/js/bootstrap.min.js',
                     'jquery.min.js': 'jquery/dist/jquery.min.js',
                     'jquery.min.map': 'jquery/dist/jquery.min.map',
-                    'angular.min.js': 'angular/angular.min.js',
-                    'angular.min.map': 'angular/angular.min.js.map'
                 }
             },
             // CSS Files
@@ -153,7 +168,7 @@ module.exports = function(grunt) {
                     './sass/**/*.scss',
                     './js/**/*.js'
                 ],
-                tasks: ['compass:dev', 'concat', 'uglify']
+                tasks: ['compass:dev']
             }
         }
  
@@ -162,14 +177,14 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-run');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-bowercopy');
 
  
     // Default task.
-    grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'concat', 'uglify', 'bowercopy', 'watch']);
+    grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'browserify',  'uglify', 'bowercopy', 'run:after_build']);
  
 };
