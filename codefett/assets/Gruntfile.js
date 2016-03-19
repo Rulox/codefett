@@ -11,9 +11,6 @@ module.exports = function(grunt) {
             },
             bower: {
                 exec: 'bower install'
-            },
-            after_build: {
-                exec: 'rm -rf ./build/' // Compiled files from ES6 to ES5
             }
         },
 
@@ -44,7 +41,7 @@ module.exports = function(grunt) {
             dist: {
                options: {
                   transform: [
-                     ["babelify", {presets: ["es2015", "react"] }]
+                     ["babelify", {presets: ["es2015", "stage-0", "react"] }]
                   ]
                },
                files: {
@@ -154,7 +151,7 @@ module.exports = function(grunt) {
                     './sass/**/*.scss',
                     './js/**/*.js'
                 ],
-                tasks: ['compass:dev']
+                tasks: ['compass:dev', 'browserify', 'uglify']
             }
         }
  
@@ -171,6 +168,6 @@ module.exports = function(grunt) {
 
  
     // Default task.
-    grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'browserify',  'uglify', 'bowercopy', 'run:after_build']);
+    grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'browserify',  'uglify', 'bowercopy', 'watch']);
  
 };

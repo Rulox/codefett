@@ -1,0 +1,64 @@
+@import "compass/css3";
+
+@mixin spinner($color:$spinner, $size:64px, $stroke:5px, $duration:4s, $center:true) {
+	@if $center{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -$size/2;
+		margin-top: -$size/2;
+		display: block;
+	} @else {
+		position: relative;
+		display: inline-block;
+	}
+	width: $size;
+	height: $size;
+	@include animation ($duration/4 spin infinite cubic-bezier(0.255, 0.2, 0.315, 0.455));
+	@include transform-origin (50%, 50%);
+
+	span, span:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $size/2;
+		height: $size;
+		overflow: hidden;
+		@include box-sizing (border-box);
+		@include transform-origin (100%, 50%);
+		@include border-top-left-radius ($size/2);
+		@include border-bottom-left-radius ($size/2);
+	}
+
+	span {
+		&:before {
+			content: "";
+			border: $stroke solid $color;
+			border-right-color: transparent;
+			@include animation ($duration mask infinite linear);
+		}
+		&:nth-child(1) { @include rotateZ(180deg); }
+		&:nth-child(2) {
+			@include rotateZ(360deg);
+			&:before { @include animation-delay ($duration / 4); }
+		}
+	}
+}
+
+.cf-loader{
+	@include spinner();
+	@include opacity(0.8);
+}
+
+@include keyframes ("mask") {
+	0% { @include rotateZ(0deg); }
+	25% { @include rotateZ(180deg); }
+	50% { @include rotateZ(180deg); }
+	75% { @include rotateZ(360deg); }
+	100% { @include rotateZ(360deg); }
+}
+
+@include keyframes ("spin") {
+	0% { @include rotateZ(0deg); }
+	100% { @include rotateZ(359deg); }
+}
