@@ -1,8 +1,10 @@
-import angular from 'angular';
-import main from './app/mainComponent.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-angular.module('app', [
-	'main'
-]);
+class App extends React.Component {
+    render() {
+        return (<div>TEST</div>)
+    }
+}
 
-angular.bootstrap(document, ['app']);
+ReactDOM.render(<App/>, document.getElementById('app'))

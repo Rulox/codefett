@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,400italic' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/main.min.js' %}"></script>
     {% block extra_head %}{% endblock extra_head %}
 </head>
 <body>
@@ -42,7 +39,9 @@
     {% endblock body %}
 </div>
 
-
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.min.js' %}"></script>
 {% block extra_body %}
 {% endblock extra_body %}
 </body>

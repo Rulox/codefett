@@ -40,25 +40,11 @@ module.exports = function(grunt) {
         },
 
         // Transpile to ES5 JS
-        babel: {
-            options: {
-                sourceMap: true
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    ext: '.js',
-                    src: './js/**/*.js',
-                    dest: './build/'
-                }]
-            }
-        },
-
         browserify: {
             dist: {
                options: {
                   transform: [
-                     ["babelify", {presets: ["es2015"] }]
+                     ["babelify", {presets: ["es2015", "react"] }]
                   ]
                },
                files: {
