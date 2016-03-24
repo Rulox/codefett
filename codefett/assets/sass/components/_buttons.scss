@@ -8,23 +8,23 @@
   color: #FFF;
   background-color: $btn;
   border-color: $btn;
+
+  &:hover {
+    background-color: $btn_hover;
+    border-color: $btn;
+  }
 }
 
 .btn-register {
   @extend .btn-primary;
   background-color: $blue_dark;
   border-color: $blue_dark;
-}
 
-.btn-register:hover {
-  background-color: $btn_register_hover !important;
-  border-color: $blue_dark !important;
-  color: white !important;
-}
-
-.btn-primary:hover {
-  background-color: $btn_hover;
-  border-color: $btn;
+  &:hover {
+    background-color: $btn_register_hover !important;
+    border-color: $blue_dark !important;
+    color: white !important;
+  }
 }
 
 .btn-register:active, .btn-register:focus {

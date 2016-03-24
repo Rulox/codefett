@@ -7,8 +7,7 @@ import Home from './modules/home/home.js'
 class App extends React.Component {
     constructor(props) {
         super(props)
-        const comp = this
-        setTimeout(()=> {comp.setState({loading: false})}, 1000)
+        setTimeout(()=> {this.setState({loading: false})}, 1000)
     }
 
     state = {
@@ -17,13 +16,9 @@ class App extends React.Component {
 
     render() {
         if (this.state.loading) {
-            return (
-                <Loader />
-            )
+            return (<Loader />)
         } else {
-            return (
-                <Home />
-            )
+            return (<Home />)
         }
     }
 }

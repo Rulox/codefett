@@ -2,6 +2,7 @@
 @import 'utils/colors';
 @import 'utils/variables';
 @import 'utils/breakpoints';
+@import 'utils/animations';
 
 /* MODULES */
 @import 'modules/home';
@@ -12,6 +13,7 @@
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/navbar';
+@import 'components/navbar-header';
 @import 'components/panels';
 
 /* SMALL COMPONENTS (atoms) */

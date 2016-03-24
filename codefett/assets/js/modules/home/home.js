@@ -6,7 +6,7 @@ export default class Home extends React.Component {
     render() {
         return(
             <div className="home">
-                <Header/>
+                <Header height={document.documentElement.clientHeight} />
             </div>
         )
     }

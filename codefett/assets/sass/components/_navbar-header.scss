@@ -1,0 +1,45 @@
+.nav {
+  .nav-header {
+    @include breakpoint($tablet) {
+      display: none
+    }
+
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding-top: 65px;
+
+    .logo {
+
+    }
+
+    .menu {
+      ul{
+        list-style-type: none;
+
+        li {
+          display: inline;
+          margin-left: 15px;
+          margin-right: 15px;
+
+          a {
+            font-size: 14px;
+            color: $color_header_font;
+
+            -o-transition:.8s;
+            -ms-transition:.8s;
+            -moz-transition:.8s;
+            -webkit-transition:.8s;
+            transition:.8s;
+
+            &:hover {
+              text-decoration: none;
+              color: $color_link;
+            }
+          }
+        }
+      }
+    }
+  }
+}
