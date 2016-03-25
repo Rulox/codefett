@@ -24,7 +24,7 @@
           margin-right: 15px;
 
           a {
-            font-size: 14px;
+            font-size: 13px;
             color: $color_header_font;
 
             -o-transition:.8s;
@@ -36,6 +36,10 @@
             &:hover {
               text-decoration: none;
               color: $color_link;
+            }
+
+            &:active {
+              text-decoration: none;
             }
           }
         }

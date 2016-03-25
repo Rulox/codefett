@@ -2,16 +2,17 @@ import React from 'react'
 import NavbarHeader from '../navbar/navbar-header.js'
 
 export default class Header extends React.Component {
+    constructor(props) {
+        super(props)
+        window.addEventListener('resize', this.handleResize.bind(this))
+    }
+
     state = {
         height: this.props.height
     }
 
     handleResize(e) {
         this.setState({height: document.documentElement.clientHeight})
-    }
-
-    componentDidMount() {
-        window.addEventListener('resize', this.handleResize)
     }
 
     componentWillUnmount() {
