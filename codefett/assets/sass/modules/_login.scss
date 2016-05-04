@@ -1,0 +1,26 @@
+.login {
+  width: 100%;
+  z-index: 0;
+  background: url('/static/images/login-bg.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  display: block;
+
+  .login-form {
+    @include animation('fade-in 1s 1');
+    transform: translateY(50%);
+    margin: 0 auto;
+    width: 380px;
+    display: block;
+
+    .form-control-feedback {
+      color: $input-border;
+      font-size: 28px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .home {
+  @include animation('fade-in 1s 1');
   .header {
     width: 100%;
     color: $color_header_font;

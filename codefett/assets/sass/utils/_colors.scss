@@ -3,11 +3,14 @@
 // Main color palette of Codefett.
 $blue_dark: #2B2D42;
 $blue_light: #8D99AE;
-$background: #EDF2F4;
+//$background: #EDF2F4;
+$background: white;
 $red_dark: #D90429;
 $red_light: #EF233C;
 $gray_dark: #333333;
 $white: white;
+$gray_light: #FCF9EF;
+$gray_lighter: #EEEEEE;
 
 /* Make some more readable variables */
 
@@ -19,6 +22,12 @@ $color_header_font: $white;
 $btn: $red_dark;
 $spinner: $red_dark;
 $home_header: $gray_dark;
+
+$panel-header: $red_dark;
+$panel_background: $gray_light;
+
+$input_background: $white;
+$input-border: $gray_lighter;
 
 
 /* Variations */

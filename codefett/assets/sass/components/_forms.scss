@@ -1,6 +1,12 @@
-input[type=text], 
-input[type=email], 
-input[type=password] {
+input[type=text],
+input[type=password]  {
+  @include font-size(18);
+  font-family: Roboto-Bold, 'sans-serif';
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $input_background;
+  border: 1px solid $input-border;
+  border-right: 6px solid $input-border;
   border-radius: 0;
-  border-color: $blue_light;
 }

@@ -2,7 +2,14 @@
   margin-top: $panel_margin;
   margin-bottom: $panel_margin;
   padding: $panel_padding;
-  background-color: #FFF;
-  border: 1px solid $blue_light;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  background-color: $panel_background;
+
+  .panel-header {
+  }
+
+  .panel-body {
+    @include font-size(14px);
+  }
+
+  .panel-footer {}
 }
