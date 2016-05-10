@@ -1,7 +1,7 @@
 ![alt tag](https://raw.githubusercontent.com/Rulox/codefett/develop/codefett/assets/images/logo_small.png)
 
 [![Build Status](https://travis-ci.org/Rulox/codefett.svg)](https://travis-ci.org/Rulox/codefett) [![Coverage Status](https://coveralls.io/repos/Rulox/codefett/badge.svg?branch=develop&service=github)](https://coveralls.io/github/Rulox/codefett?branch=develop)
-[![Code Health](https://landscape.io/github/Rulox/codefett/master/landscape.svg?style=flat)](https://landscape.io/github/Rulox/codefett/master)
+[![Code Health](https://landscape.io/github/Rulox/codefett/develop/landscape.svg?style=flat)](https://landscape.io/github/Rulox/codefett/develop)
 
 -------
 Web application for automatic testing codes from students
