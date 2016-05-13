@@ -1,11 +1,11 @@
 .nav {
   .nav-header {
-    @include breakpoint($mobile) {
-      display: none
+    @include breakpoint($desktop) {
+      display: block;
     }
 
     position: absolute;
-    display: block;
+    display: none;
     width: 100%;
     height: 120px;
     padding-top: 65px;
@@ -13,6 +13,8 @@
     .menu {
       ul{
         list-style-type: none;
+        margin-top: 15px;
+        margin-bottom: 0;
 
         li {
           display: inline;

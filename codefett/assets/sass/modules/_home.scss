@@ -1,24 +1,110 @@
 .home {
   @include animation('fade-in 1s 1');
   .header {
+    z-index: 2;
     width: 100%;
-    max-height: 700px;
+    height: auto;
     color: $color_header_font;
-    background-size: 100%;
-    background: url('/static/images/hero-bg.jpg') no-repeat;
 
-    @include breakpoint($mobile) {
-      max-height: 300px;
+    @include breakpoint($desktop) {
+      height: 500px;
     }
 
+    .homepage-hero-module {
+      border-right: none;
+      border-left: none;
+      position: relative;
+      height: auto;
+
+      @include breakpoint($desktop) {
+        height: 500px;
+      }
+
+    }
+
+    .no-video .video-container video,
+    .touch .video-container video {
+      display: none;
+    }
+
+    .no-video .video-container .poster,
+    .touch .video-container .poster {
+      display: block !important;
+    }
+
+    .video-container {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-container .poster img {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .video-container .filter {
+      z-index: 100;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+
+    .video-container video {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+    }
+
+    .video-container video.fillWidth {
+      width: 100%;
+    }
+
+
     .content {
-      padding-top: 120px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+
+      @include breakpoint($tablet) {
+        margin-top: 120px;
+      }
+
+      h1 {
+        @include font-size(52);
+        letter-spacing: 2px;
+        font-weight: 200;
+      }
+
+      p {
+        @include font-size(24);
+        font-style: italic;
+        font-weight: 100;
+      }
+
+      button {
+        margin-top: 10px;
+
+        @include breakpoint($desktop) {
+          margin-top: 80px;
+        }
+      }
     }
 
     &-cover {
       position: absolute;
+      z-index: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4);
+      height: inherit;
+
+      @include breakpoint($desktop) {
+        height: 500px;
+      }
     }
   }
 }

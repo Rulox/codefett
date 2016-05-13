@@ -9,7 +9,9 @@ export default class NavbarHeader extends React.Component {
           <div className='container'>
             <div className='row'>
               <div className='col-md-12'>
-                <div className='logo pull-left'>logo</div>
+                <div className='logo pull-left'>
+                  <img src="/static/images/logo_small.png"/>
+                </div>
                 <div className='menu pull-right'>
                   <ul>
                     <li>

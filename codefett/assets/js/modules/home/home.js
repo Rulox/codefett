@@ -7,7 +7,12 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <Header height={document.documentElement.clientHeight} />
+        <Header />
+        BUILT WITH
+        WHAT IS CODEFETT
+        WHO CAN USE IT
+        CONTRIBUTE
+        FOOTER
       </div>
     )
   }
