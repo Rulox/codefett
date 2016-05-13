@@ -1,5 +1,5 @@
 @import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
-$desktop: 768px;
-$tablet: 320px 768px;
-$mobile: 0px 320px;
+$desktop: min-width 768px;
+$tablet: 480px 768px;
+$mobile: 0 480px;

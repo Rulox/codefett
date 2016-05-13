@@ -2,9 +2,14 @@
   @include animation('fade-in 1s 1');
   .header {
     width: 100%;
+    max-height: 700px;
     color: $color_header_font;
-    background-size: cover;
-    background: url('/static/images/hero-bg.jpg') no-repeat center;
+    background-size: 100%;
+    background: url('/static/images/hero-bg.jpg') no-repeat;
+
+    @include breakpoint($mobile) {
+      max-height: 300px;
+    }
 
     .content {
       padding-top: 120px;
