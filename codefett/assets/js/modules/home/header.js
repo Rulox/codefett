@@ -2,8 +2,7 @@ import React from 'react'
 import NavbarHeader from '../navbar/navbar-header.js'
 import NavbarMobile from '../navbar/navbar-mobile';
 
-export default
-class Header extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props)
   }

@@ -121,7 +121,7 @@ module.exports = function (grunt) {
           destPrefix: '../static/fonts'
         },
         files: {
-          '': 'bootstrap/dist/fonts/*'
+          '': ['bootstrap/dist/fonts/*', '../fonts/*']
         }
       },
       // Images

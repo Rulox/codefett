@@ -108,3 +108,21 @@
     }
   }
 }
+
+.built-with {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  background-color: $gray_light;
+  border-bottom: 1px solid $gray-medium;
+
+  .built-item {
+    display: inline-block;
+    height: 55px;
+    margin-left: $panel_margin;
+    margin-right: $panel_margin;
+  }
+
+  .icon-red {
+    color: $btn;
+  }
+}

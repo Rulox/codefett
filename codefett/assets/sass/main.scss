@@ -4,6 +4,7 @@
 @import 'utils/variables';
 @import 'utils/breakpoints';
 @import 'utils/animations';
+@import 'utils/icons';
 
 /* MODULES */
 @import 'modules/home';
@@ -19,6 +20,7 @@
 @import 'components/navbar-mobile';
 @import 'components/panels';
 @import 'components/modals';
+@import 'components/text';
 
 
 /* SMALL COMPONENTS (atoms) */
@@ -28,7 +30,7 @@
 html,
 body {
   background-color: $background;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 a {

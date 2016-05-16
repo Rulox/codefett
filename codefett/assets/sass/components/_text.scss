@@ -1,0 +1,15 @@
+h1 {
+  @include font-size(48);
+}
+
+h2 {
+  @include font-size(24);
+}
+
+h3 {
+  @include font-size(18);
+}
+
+h4 {
+  @include font-size(16);
+}
