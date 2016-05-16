@@ -26,6 +26,10 @@
 /* SMALL COMPONENTS (atoms) */
 @import 'components/atoms/loader';
 
+
+/* Dashboard imports */
+@import 'modules/dashboard/main';
+
 /* GENERAL */
 html,
 body {

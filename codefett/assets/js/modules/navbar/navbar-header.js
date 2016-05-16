@@ -18,16 +18,13 @@ export default class NavbarHeader extends React.Component {
                       <Link to={`/login/`}>Login</Link>
                     </li>
                     <li>
-                      <a href="#">MENU1</a>
+                      <a href="#">Register</a>
                     </li>
                     <li>
-                      <a href="#">MENU1</a>
+                      <a href="#">Github</a>
                     </li>
                     <li>
-                      <a href="#">MENU1</a>
-                    </li>
-                    <li>
-                      <a href="#">MENU1</a>
+                      <a href="#">Contact</a>
                     </li>
                   </ul>
                 </div>

@@ -115,6 +115,10 @@
   background-color: $gray_light;
   border-bottom: 1px solid $gray-medium;
 
+  h4 {
+    margin-bottom: 25px;
+  }
+
   .built-item {
     display: inline-block;
     height: 55px;
