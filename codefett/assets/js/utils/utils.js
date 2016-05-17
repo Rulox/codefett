@@ -10,7 +10,7 @@ export const DEBUG = true
  * @param success_cb
  * @param failure_cb
  */
-export function ajaxRequest(url, options, success_cb=null, failure_cb=null) {
+export function ajaxRequest(url, options={}, success_cb=null, failure_cb=null) {
   var defaultOptions = {
     method: 'GET'
   }
