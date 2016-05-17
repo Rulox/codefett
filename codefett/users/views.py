@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.utils.translation import ugettext as _
 from django.views.generic import View

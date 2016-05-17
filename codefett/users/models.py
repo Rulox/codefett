@@ -1,5 +1,4 @@
 from __future__ import unicode_literals
-from django.contrib.auth.models import User
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils.translation import ugettext as _
@@ -72,3 +71,6 @@ class CFUser(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_admin
+
+    def get_avatar_url(self):
+        return self.avatar.url
