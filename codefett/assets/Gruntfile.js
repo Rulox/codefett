@@ -169,5 +169,6 @@ module.exports = function (grunt) {
 
   // Default task.
   grunt.registerTask('default', ['run:prepare', 'run:bower', 'compass:dev', 'browserify', 'uglify', 'bowercopy', 'watch']);
+  grunt.registerTask('windows', ['run:bower', 'compass:dev', 'browserify', 'uglify', 'bowercopy', 'watch']);
 
 };
