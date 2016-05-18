@@ -12,15 +12,6 @@ export default class Header extends React.Component {
       <div className="header">
 
         <div className="homepage-hero-module">
-          <div className="video-container">
-              <div className="filter"></div>
-              <video autoPlay loop className="fillWidth">
-                  <source src="/static/videos/hero_video.mp4" type="video/mp4" />
-                  <source src="/static/videos/hero_video.webm" type="video/webm" />
-              </video>
-              <div className="poster hidden">
-                  <img src="static/images/video_snapshot.jpg" alt="video_cover"/>
-              </div>
             <div className="header-cover"></div>
 
             <NavbarHeader />
@@ -44,7 +35,7 @@ export default class Header extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
+
         </div>
 
       </div>
