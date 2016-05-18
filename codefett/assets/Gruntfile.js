@@ -132,15 +132,6 @@ module.exports = function (grunt) {
         files: {
           '': '../images/*'
         }
-      },
-      // Videos
-      videos: {
-        options: {
-          destPrefix: '../static/videos'
-        },
-        files: {
-          '': '../videos/*'
-        }
       }
     },
 
