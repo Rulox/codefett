@@ -1,6 +1,5 @@
 import * as $ from "../../bower_components/jquery/dist/jquery";
 
-export const API_ENDPOINT = 'http://localhost:8000';
 export const DEBUG = true
 
 /**
@@ -18,7 +17,7 @@ export function ajaxRequest(url, options={}, success_cb=null, failure_cb=null) {
   $.extend(defaultOptions, options)
 
   $.ajax({
-    url: API_ENDPOINT + url,
+    url: url,
     method: options.method
   })
   .done((data) => {
