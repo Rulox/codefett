@@ -14,18 +14,17 @@ export default class NavbarHeader extends React.Component {
                 </div>
                 <div className='menu pull-right'>
                   <ul>
-                    <li>
-                      <Link to={`/login/`}>Login</Link>
-                    </li>
-                    <li>
-                      <a href="#">Register</a>
-                    </li>
-                    <li>
-                      <a href="#">Github</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact</a>
-                    </li>
+                    {
+                      this.props.menu.map((item, index)=> {
+                        return (
+                         <li key={index}>
+                           {
+                             item.internal ? <Link to={item.link}>{item.text}</Link> : <a href={item.link}>{item.text}</a>
+                           }
+                         </li>
+                        )
+                      })
+                    }
                   </ul>
                 </div>
               </div>

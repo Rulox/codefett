@@ -1,6 +1,7 @@
 import React from 'react'
-import NavbarHeader from '../navbar/navbar-header.js'
-import NavbarMobile from '../navbar/navbar-mobile';
+import NavbarHeader from '../navbar/navbar-header'
+import NavbarMobile from '../navbar/navbar-mobile'
+import Navbar from '../navbar/navbar'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -14,8 +15,9 @@ export default class Header extends React.Component {
         <div className="homepage-hero-module">
             <div className="header-cover"></div>
 
-            <NavbarHeader />
-            <NavbarMobile />
+            <NavbarHeader menu={this.props.menu} />
+            <NavbarMobile menu={this.props.menu} />
+            <Navbar menu={this.props.menu} />
 
             <div className="container content">
               <div className="row">
@@ -43,3 +45,35 @@ export default class Header extends React.Component {
   }
 }
 
+/**
+ * Set the static menu.
+ * @type {{menu: *[]}}
+ */
+Header.defaultProps = {
+  menu: [
+    {
+      text: 'Login',
+      link: '/login/',
+      blank: false,
+      internal: true
+    },
+    {
+      text: 'Register',
+      link: '/register/',
+      blank: false,
+      internal: true
+    },
+    {
+      text: 'GitHub',
+      link: 'http://www.github.com/Rulox/codefett',
+      blank: true,
+      internal: false
+    },
+    {
+      text: 'Contact',
+      link: '/contact/',
+      blank: false,
+      internal: true
+    }
+  ]
+}
