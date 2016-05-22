@@ -25,6 +25,7 @@
 
 /* SMALL COMPONENTS (atoms) */
 @import 'components/atoms/loader';
+@import 'components/atoms/hamburger';
 
 
 /* Dashboard imports */
@@ -43,4 +44,15 @@ a {
 
 a:hover {
   color: $red_light;
+}
+
+/* Bootstrap overrides */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include breakpoint($tablet) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }

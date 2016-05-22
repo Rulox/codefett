@@ -1,0 +1,9 @@
+@import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+.hamburger-inner {
+  background-color: $white;
+
+  &::after, &::before {
+    background-color: $white;
+  }
+}

@@ -30,25 +30,36 @@
 
 
     .content {
+      margin-top: 50px;
 
-      @include breakpoint($tablet) {
+      @include breakpoint($desktop) {
         margin-top: 120px;
       }
 
       h1 {
-        @include font-size(52);
+        @include font-size(28);
+
+        @include breakpoint($tablet) {
+          @include font-size(52);
+        }
+
         letter-spacing: 2px;
         font-weight: 200;
       }
 
       p {
-        @include font-size(24);
+        @include font-size(18);
+
+        @include breakpoint($tablet) {
+          @include font-size(24);
+        }
+
         font-style: italic;
         font-weight: 100;
       }
 
       button {
-        margin-top: 10px;
+        margin-top: 30px;
 
         @include breakpoint($desktop) {
           margin-top: 60px;
