@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Codefett APPs
     'common',
     'users',
+    'courses',
 ]
 
 MIDDLEWARE_CLASSES = [
