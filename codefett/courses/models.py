@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.utils.translation import ugettext as _
 from users.models import CFUser
+from plugins.models import Plugin
 from django.db import models
 
 STUDENTS_LIMIT_DEFAULT = 16
@@ -21,7 +22,7 @@ class Course(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(verbose_name=_('Course full description'))
     image = models.ImageField(upload_to='course_images', blank=True, null=True)
-    plugin = models.CharField(max_length=255, choices=PLUGIN_CHOICES, default='')
+    plugin = models.ForeignKey(Plugin)
     owner = models.ForeignKey(CFUser, related_name='own_course')
     created_at = models.DateField(auto_now_add=True)
     start_date = models.DateField(verbose_name=_('Course start date'))

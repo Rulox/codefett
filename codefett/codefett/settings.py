@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'common',
     'users',
     'courses',
+    'plugins'
 ]
 
 MIDDLEWARE_CLASSES = [

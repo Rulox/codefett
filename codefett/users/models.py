@@ -73,4 +73,4 @@ class CFUser(AbstractBaseUser):
         return self.is_admin
 
     def get_avatar_url(self):
-        return self.avatar.url
+        return self.avatar.url if self.avatar else ''
