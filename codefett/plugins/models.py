@@ -8,14 +8,14 @@ PLUGINS_PATH = 'plugins/lib'
 
 modules = pkgutil.iter_modules(path=[PLUGINS_PATH])
 methods = []
-for loader, mod_name, ispkg in modules:
+for loader, mod_name, is_pkg in modules:
     methods.append(str(mod_name))
 
 METHOD_CHOICES = [(name, name) for name in methods]
 
 
 class Plugin(models.Model):
-    description = models.TextField()
+    description = models.TextField(blank=True, null=True)
     path = models.CharField(unique=True, choices=METHOD_CHOICES, max_length=255)
 
     @property
