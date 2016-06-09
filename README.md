@@ -13,7 +13,29 @@ Tool that allows users to upload tests and/or programming activities. The applic
 ## Spanish
 Prototipo de una herramienta que permita la entrega de actividades o prácticas, su testeo y su posterior calificación.
 
+# How does it work
+1. As a teacher, everyone can create a new course in CodeFett.
+2. After someone creates a course, students can apply for them before the inscription end date.
+3. The teacher would be able to choose between different `Plugins`. Each plugin is designed to work
+with a different language and/or framework.
+4. Teacher will be able to download the example project provided with each plugin, and he will
+be responsible to code some tests for it. 
+5. Students now, can download only the Example Project and code inside, following the
+teacher's directions. 
+6. Students will upload the project to CodeFett and they will receive some kind of
+marks, based on their performance!
+
 # Plugins
+CodeFett uses plugins to perform code tests. Do you miss a language, or a more complex 
+course? Feel free to contribute with a plugin!
+
+What do you need to create a new plugin?
+- An example project
+- A Test file
+- A docker file to run the tests
+
+[WIP - more information will be added soon!]
+
 # Credits
 
 # Dependencies (WIP)

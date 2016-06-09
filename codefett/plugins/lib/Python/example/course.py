@@ -4,7 +4,7 @@ class Course(object):
     methods to complete your tasks.
     """
 
-    def solution(self):
+    def solution(self, *args, **kwargs):
         """
         Code your solution here! Remember, you can add more methods
         to this class if you want, but the test case is going to look
