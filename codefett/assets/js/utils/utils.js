@@ -10,26 +10,33 @@ export const DEBUG = true
  * @param failure_cb
  */
 export function ajaxRequest(url, options={}, success_cb=null, failure_cb=null) {
-  var defaultOptions = {
-    method: 'GET'
+  let defaultOptions = {
+    method: 'GET',
+    data: null,
+    dataType: 'json'
   }
 
   $.extend(defaultOptions, options)
 
   $.ajax({
     url: url,
-    method: options.method
+    method: options.method,
+    data: options.data
   })
   .done((data) => {
-    if (success_cb)
+    if (success_cb) {
       success_cb(data)
+    }
   })
   .fail((data) => {
-    if (failure_cb)
+    if (failure_cb) {
       failure_cb(data)
+    }
 
     if (DEBUG) {
       console.warn('There was an error on the request. More info:')
+      console.warn(data.responseText)
+      console.log("Complete object for more information:")
       console.log(data)
     }
   })

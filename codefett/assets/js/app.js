@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Router, Route, Link, hashHistory } from 'react-router'
 
 import Loader from './components/loader.js'
 import Home from './modules/home/home.js'
@@ -30,9 +30,9 @@ class App extends React.Component {
       return (<Loader />)
     } else {
       return (
-        <Router history={browserHistory}>
+        <Router history={hashHistory}>
           <Route path="/" component={Home}/>
-          <Route path="/login" component={Login} />
+          <Route path="login" component={Login} />
           {/*
           <Route path="dashboard" component={Users}>
               <Route path="/user/:userId" component={User}/>

@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import pkgutil
+import zipfile
 from django.db import models
 
 

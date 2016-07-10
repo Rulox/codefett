@@ -53,10 +53,10 @@ class LoginView(CsrfExemptMixin, JsonRequestResponseMixin, AjaxResponseMixin, Vi
     def post_ajax(self, request, *args, **kwargs):
         email = self.request_json.get('email')
         password = self.request_json.get('password')
-
-        if not email and password:
+        if not email or not password:
             return self.render_json_response(
-                {u'message': _(u'You must introduce your email and password.')}
+                {u'message': _(u'You must introduce your email and password.')},
+                status=400
             )
 
         account = authenticate(email=email, password=password)
@@ -70,6 +70,7 @@ class LoginView(CsrfExemptMixin, JsonRequestResponseMixin, AjaxResponseMixin, Vi
         else:
             return self.render_json_response(
                 {u'message': _(u'Invalid username/password, try again.')},
+                status=400
             )
 
 

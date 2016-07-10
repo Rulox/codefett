@@ -2,6 +2,7 @@ import React from 'react'
 import NavbarHeader from '../navbar/navbar-header'
 import NavbarMobile from '../navbar/navbar-mobile'
 import Navbar from '../navbar/navbar'
+import {Link} from 'react-router'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class Header extends React.Component {
                   </div>
                   <div className="row">
                     <div className="col-lg-4 col-lg-offset-4">
-                      <button className="btn btn-primary">GET STARTED NOW!</button>
+                      <Link to="login"><button className="btn btn-primary">GET STARTED NOW!</button></Link>
                     </div>
                   </div>
                   <div className="row">
@@ -37,9 +38,7 @@ export default class Header extends React.Component {
                 </div>
               </div>
             </div>
-
         </div>
-
       </div>
     )
   }
@@ -53,7 +52,7 @@ Header.defaultProps = {
   menu: [
     {
       text: 'Login',
-      link: '/login/',
+      link: 'login',
       blank: false,
       internal: true
     },

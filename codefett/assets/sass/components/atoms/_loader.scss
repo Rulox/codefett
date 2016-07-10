@@ -50,6 +50,11 @@
 	@include opacity(0.8);
 }
 
+.cf-loader-insite {
+	@include spinner($spinner, 28px, 4px, 4s, false);
+	@include opacity(0.8);
+}
+
 @include keyframes ("mask") {
 	0% { @include rotateZ(0deg); }
 	25% { @include rotateZ(180deg); }

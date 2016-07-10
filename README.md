@@ -30,8 +30,8 @@ CodeFett uses plugins to perform code tests. Do you miss a language, or a more c
 course? Feel free to contribute with a plugin!
 
 What do you need to create a new plugin?
-- An example project
-- A Test file
+- An example project (literally, the folder has to be called `example`)
+- A Test file in the same language than the plugin to test the example project
 - A docker file to run the tests
 
 [WIP - more information will be added soon!]

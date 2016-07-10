@@ -111,8 +111,7 @@ module.exports = function (grunt) {
           destPrefix: '../static/css'
         },
         files: {
-          'bootstrap.min.css': 'bootstrap/dist/css/bootstrap.min.css',
-          'bootstrap.min.css.map': 'bootstrap/dist/css/bootstrap.min.css.map',
+          'bootstrap.min.css': '../lib/bootstrap.min.css'
         }
       },
       // Fonts files
