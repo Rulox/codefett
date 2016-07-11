@@ -44,7 +44,7 @@
         @include transition(all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1));
         background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 94%, $color_link 6%);
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 94%, $color_link 6%);
-        background-position: -500px 0;
+        background-position: -100vh 0;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         color: black;
