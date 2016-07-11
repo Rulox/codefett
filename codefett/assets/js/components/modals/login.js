@@ -48,34 +48,35 @@ export default class Login extends React.Component {
 
   render() {
       return (
-        <div className="login-container">
-          <div className="login col-sm-4 col-sm-offset-4">
-            <div className="text-center">
-              <div className="cf-panel login-form">
-                <div className="panel-header">
-                  <Link to="/">
-                    <img className="img img-resonsive" src="/static/images/logo_small.png"/>
-                  </Link>
-                  <br/>
-                </div>
-                <div className="panel-body text-center">
-
-                  <form>
-                      <input ref="user" type="text" className=""  placeholder="Email"/>
-                      <i className="glyphicon glyphicon-user form-control-feedback"></i>
-                      <input ref="password" type="password" className="form-control"
-                             placeholder="Password"/>
-                      <i className="glyphicon glyphicon-lock form-control-feedback"></i>
-                    <button className="btn btn-primary" onClick={this.login}>LOGIN</button>
-                  </form>
-
-                  <div className="errors" ref="errors">
-                    {this.state.loading ? <Loader insite={true} /> : null}
+        <div className="container">
+          <div className="login-container">
+            <div className="login col-sm-4 col-sm-offset-4">
+              <div className="text-center">
+                <div className="cf-panel login-form">
+                  <div className="panel-header">
+                    <Link to="/">
+                      <img className="img img-resonsive logo" src="/static/images/logo_small.png"/>
+                    </Link>
+                    <br/>
                   </div>
-                  Don't you have an account? <Link to="register">Sign up.</Link>
+                  <div className="panel-body text-center wrapper">
+
+                    <form>
+
+                       <input ref="user" type="text" required placeholder="Email"/>
+                       <input ref="password" type="password" required placeholder="Password"/>
+
+                      <button className="btn btn-primary" onClick={this.login}>LOGIN</button>
+                    </form>
+                    Don't you have an account? <Link to="register">Sign up.</Link>
+
+                    <div className="errors" ref="errors">
+                      {this.state.loading ? <Loader insite={true} /> : null}
+                    </div>
+
+                  </div>
 
                 </div>
-
               </div>
             </div>
           </div>
