@@ -13,7 +13,7 @@ class RegisterView(CsrfExemptMixin, JsonRequestResponseMixin, AjaxResponseMixin,
     require_json = True
 
     def post_ajax(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
+        if request.user.is_authenticated():
             return self.render_bad_request_response(
                 {u'message': _(u'You already have an account in CodeFett.')}
             )
@@ -36,7 +36,7 @@ class RegisterView(CsrfExemptMixin, JsonRequestResponseMixin, AjaxResponseMixin,
         user = CFUser.objects.create_user(email, pass1)
         user.full_name = full_name
         user.save()
-
+        authenticate(email=email, password=pass1)
         return self.render_json_response(
             {u'message': _(u'Your account has been created.')}
         )

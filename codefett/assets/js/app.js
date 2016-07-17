@@ -4,7 +4,8 @@ import { Router, Route, Link, useRouterHistory  } from 'react-router'
 import { createHashHistory } from 'history'
 import Loader from './components/loader.js'
 import Home from './modules/home/home.js'
-import Login from './components/modals/login.js'
+import Login from './components/users/login.js'
+import Register from './components/users/register.js'
 import { ajaxRequest } from './utils/utils'
 
 const history = useRouterHistory(createHashHistory)({ queryKey: false })
@@ -36,11 +37,7 @@ class App extends React.Component {
         <Router history={history}>
           <Route path="/" component={Home}/>
           <Route path="login" component={Login} />
-          {/*
-          <Route path="dashboard" component={Users}>
-              <Route path="/user/:userId" component={User}/>
-            </Route>
-          */}
+          <Route path="register" component={Register} />
         </Router>
       )
     }
