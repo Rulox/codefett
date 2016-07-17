@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import json
+from django.middleware.csrf import get_token
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from users.models import CFUser
@@ -36,7 +37,7 @@ def get_shared_data(request, **kwargs):
     shared_data = {
         'user': user,
         'meta': {},
-        'crsftoken': {}
+        'crsftoken': get_token(request)
     }
 
     return HttpResponse(json.dumps(shared_data), 'application/json')
