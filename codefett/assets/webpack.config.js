@@ -1,38 +1,48 @@
-const webpack = require('webpack'),
-      path    = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+      // HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = {
-  entry: './app.js',
+const path              = require('path'),
+      webpack           = require('webpack'),
+      nodeExternals     = require('webpack-node-externals');
 
-  output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, '../static'),
-  },
+// Plugins
+const extractSass = new ExtractTextPlugin({
+  filename: "app.css",
+  allChunks: true,
+});
 
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        }
-      },
-      {
-        test: /\.scss$/,
-        use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-        }, {
-            loader: "css-loader" // translates CSS into CommonJS
-        }, {
-            loader: "sass-loader" // compiles Sass to CSS
-        }]
-      }
-    ]
-  }
+// Rules
+const jsRules  = 
+{ test: /\.js$/, 
+  exclude: /node_modules/, 
+  use: 'babel-loader'
+};
+const cssRules = 
+{ test: /\.scss$/, 
+  use: extractSass.extract({
+    use: [
+      "css-loader", 
+      "postcss-loader",
+      "sass-loader"
+    ],
+  })
 };
 
-module.exports = config;
+module.exports = {
+  entry: './app.js',
+  output: {
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'static'),
+    publicPath: '/',
+  },
+  // devtool: 'source-map',
+  module: {
+    rules: [
+      jsRules,
+      cssRules,
+    ]
+  },
+  plugins: [
+
+  ]
+}
