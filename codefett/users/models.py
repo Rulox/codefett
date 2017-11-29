@@ -1,4 +1,3 @@
-from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils.translation import ugettext as _
@@ -57,8 +56,8 @@ class CFUser(AbstractBaseUser):
     def is_staff(self):
         return self.is_admin
 
-    def __unicode__(self):
-        return u'{} ({})'.format(self.name, self.email)
+    def __str__(self):
+        return '{} ({})'.format(self.name, self.email)
 
     def get_full_name(self):
         return self.full_name

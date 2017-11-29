@@ -10,9 +10,6 @@ Web application for automatic testing codes from students
 ## English
 Tool that allows users to upload tests and/or programming activities. The application will correct and return some feedback and a realtime calification for the students. Users can create/manage courses and prepare them for the students to upload code.
 
-## Spanish
-Prototipo de una herramienta que permita la entrega de actividades o prácticas, su testeo y su posterior calificación.
-
 # How does it work
 1. As a teacher, everyone can create a new course in CodeFett.
 2. After someone creates a course, students can apply for them before the inscription end date.
@@ -36,23 +33,5 @@ What do you need to create a new plugin?
 
 [WIP - more information will be added soon!]
 
-# Credits
-
-# Dependencies (WIP)
-If you want to contribute to this project, please keep in mind the following dependencies. There
-are different dependencies if you are going to work in the backend or in the frontend.
-##### Dependencies (BackEnd)
-* Python 2.7
-* Django 1.8
-* ... See `requirements`
-
-##### Dependencies (FrontEnd)
-* Ruby-dev
-* Sass
-* Compass
-* Nodejs (npm)
-
 ![alt tag](http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
 
-Raúl Marrero Rodríguez
-Universidad de La Laguna - Tenerife, Spain
