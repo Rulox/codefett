@@ -27,5 +27,5 @@ class Plugin(models.Model):
     def name(self):
         return self.path
 
-    def __unicode__(self):
+    def __str__(self):
         return '{} in ({})'.format(self.name, self.get_path)

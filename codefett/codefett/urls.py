@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from common.views import HomeView
+from common.views import home
 
 urlpatterns = [
     # CodeFett URLS
-    url(r'^$', HomeView.as_view(), name='home'),
+    url(r'^$', home),
+    url(r'^courses/', include('courses.urls')),
 
     url(r'^admin/', admin.site.urls)
 ]

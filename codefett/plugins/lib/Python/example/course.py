@@ -6,9 +6,8 @@ class Course(object):
 
     def solution(self, *args, **kwargs):
         """
-        Code your solution here! Remember, you can add more methods
-        to this class if you want, but the test case is going to look
-        for this solution method in order to test your results.
+        `Student` - Code your solution here! Remember to return the solution. The system
+        will look for this method in order to run the tests.
 
 
         `Teacher` - Feel free to add as many variables, parameters or

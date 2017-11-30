@@ -20,5 +20,6 @@ class TestCase(unittest.TestCase):
         # self.assertEqual(Course.solution(), 300)  e.g
         pass
 
+
 if __name__ == '__main__':
     unittest.main()
