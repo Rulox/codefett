@@ -3,48 +3,29 @@
 @import 'utils/colors';
 @import 'utils/variables';
 @import 'utils/breakpoints';
-@import 'utils/animations';
 @import 'utils/icons';
 @import 'utils/gradients';
 
-/* MODULES */
-@import 'modules/home';
-@import 'modules/login';
-@import 'modules/footer';
 
+/* ATOMS */
 
-/* BASIC COMPONENTS */
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/navbar-header';
-@import 'components/navbar-mobile';
-@import 'components/panels';
-@import 'components/modals';
-@import 'components/text';
+/* MOLECULES */
 
-
-/* SMALL COMPONENTS (atoms) */
-@import 'components/atoms/loader';
-@import 'components/atoms/hamburger';
-
-
-/* Dashboard imports */
-@import 'modules/dashboard/main';
+/* ORGANISMS */
 
 /* GENERAL */
 html,
 body {
   background-color: $background;
   font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-a {
+a, a:hover, a:focus, a:visited {
   color: $color_link;
 }
 
-a:hover {
-  color: $red_light;
-}
 
 /* Bootstrap overrides */
 .row {
