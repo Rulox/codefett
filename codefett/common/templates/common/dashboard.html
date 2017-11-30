@@ -11,7 +11,7 @@
     Your courses are:
     <ul>
         {% for course in courses %}
-            <a href="{% url 'course_detail' course.pk %}">{{ course }}</a>
+            <li><a href="{% url 'course_detail' course.pk %}">{{ course }}</a></li>
         {% endfor %}
     </ul>
     </div>
