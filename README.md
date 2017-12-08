@@ -22,16 +22,16 @@ teacher's directions.
 6. Students will upload the project to CodeFett and they will receive some kind of
 marks, based on their performance!
 
-# Plugins
+# [WIP] Plugins
 CodeFett uses plugins to perform code tests. Do you miss a language, or a more complex 
 course? Feel free to contribute with a plugin!
 
 What do you need to create a new plugin?
 - An example project (literally, the folder has to be called `example`)
 - A Test file in the same language than the plugin to test the example project
-- A docker file to run the tests
+- A Dockerfile to run the tests inside a container
+- A Python class using our custom mixin to Parse the result of the tests in the container
 
-[WIP - more information will be added soon!]
 
 ![alt tag](http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AGPLv3_Logo.svg/200px-AGPLv3_Logo.svg.png)
 

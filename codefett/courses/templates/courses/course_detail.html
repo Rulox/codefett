@@ -3,27 +3,26 @@
 {% block title %}{% endblock title %}
 
 {% block body %}
-<h1>{{ object }}</h1>
-{% if object.owner == request.user and object.status == 0%}
-<div class="preparation">
-    This course is under preparation phase. It won't start until you code some tests. Follow these steps to publish your course.
-    <h2>Step 1</h2>
-    Download the <a href="{{ example_url }}">example project</a>.
-    <h2>Step 2</h2>
-    Follow the instructions in the project file, and write some tests. Read the example project
-    comments carefully.
-    <h2>Step 3</h2>
-    Zip the project again and send it to the system. We will perform the tests and, if everything works, you
-    will be able to start the course!
-    <form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-     <input type="submit" value="Send example" />
-    </form>
-    Running...
-</div>
+    <div class="course_detail">
+    <h1>{{ object }}</h1>
+    {% if object.owner == request.user and object.status == 0%}
+    <div class="preparation">
+        This course is under preparation phase. It won't start until you code some tests. Follow these steps to publish your course.
+        <h2>Step 1</h2>
+        Download the <a href="{{ example_url }}">example project</a>.
+        <h2>Step 2</h2>
+        Follow the instructions in the project file, and write some tests. Read the example project
+        comments carefully.
+        <h2>Step 3</h2>
+        Zip the project again and send it to the system. We will perform the tests and, if everything works, you
+        will be able to start the course!
+        <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+         <input class="send_example_project" type="submit" value="Send example" />
+        </form>
+        Running...
+    </div>
 {% endif %}
-
-
-
+</div>
 {% endblock body %}

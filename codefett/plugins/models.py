@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 import pkgutil
-import zipfile
 from django.db import models
 
 
@@ -16,6 +15,7 @@ METHOD_CHOICES = [(name, name) for name in methods]
 
 
 class Plugin(models.Model):
+    #language
     description = models.TextField(blank=True, null=True)
     path = models.CharField(unique=True, choices=METHOD_CHOICES, max_length=255)
 

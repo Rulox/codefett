@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<nav class="cf-navbar">
+    <div class="cf-container">
+        <div class="logo">
+            <a href="/">
+                <img src="{% static 'images/logo_small.png' %}" alt="logo"/>
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="links">
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'course_list' %}">Courses</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+
+        <div class="login">
+            {% if request.user.is_authenticated %}
+                Welcome {{ request.user }}
+            {% else %}
+                <a href="{% url 'login' %}">Login</a> or <a href="#" class="button primary">Sign up</a>
+            {% endif %}
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+</nav>

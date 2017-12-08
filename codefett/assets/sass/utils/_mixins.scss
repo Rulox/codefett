@@ -1,5 +1,5 @@
 /* Fonts mixins */
-@mixin font-size($sizeValue: 1.6) {
+@mixin fontSize($sizeValue: 1.6) {
   font-size: ($sizeValue) + px;
   font-size: $sizeValue / 10 + rem;
 }

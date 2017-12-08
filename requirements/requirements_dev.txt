@@ -2,3 +2,5 @@
 coverage==4.0.3
 coveralls==1.1
 django-extensions==1.6.1
+docker==2.6.1
+docker-pycreds==0.2.1

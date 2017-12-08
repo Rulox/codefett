@@ -1,10 +1,32 @@
 {% extends 'common/base.html' %}
-{% load i18n %}
+{% load i18n staticfiles %}
 
 {% block title %}{% trans 'Home' %}{% endblock title %}
 
 {% block body %}
+    {% include 'common/_navbar.html' %}
     <div class="home">
-    Home
+        <div class="cf-hero" style="background-image: url('{% static 'images/books.jpg' %}');">
+            <div class="overlay"></div>
+            <div class="slogan">
+                <div class="cf-container">
+                    <div class="title">
+                        CODE. TEST. SUCCESS.
+                    </div>
+                    <div class="subtitle">
+                        Automated coding courses for teachers and students.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-separator stats">
+            <div class="cf-container">
+                <span class="bold">12</span> Courses
+                <span class="bold">80+</span> Students
+            </div>
+        </div>
+        <div class="course-grid"></div>
+        <div class="home-separator"></div>
+    {% include 'common/_footer.html' %}
     </div>
 {% endblock body %}

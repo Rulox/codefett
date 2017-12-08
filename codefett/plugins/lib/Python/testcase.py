@@ -1,6 +1,5 @@
-from __future__ import unicode_literals
 import unittest
-from .example.course import Course
+#from plugins.lib.Python.example.course import Course
 
 
 class TestCase(unittest.TestCase):
@@ -17,8 +16,7 @@ class TestCase(unittest.TestCase):
         """
         Code your tests here.
         """
-        # self.assertEqual(Course.solution(), 300)  e.g
-        pass
+        self.assertTrue(True)
 
 
 if __name__ == '__main__':

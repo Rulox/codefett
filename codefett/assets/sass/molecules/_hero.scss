@@ -1,0 +1,52 @@
+.cf-hero {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $blue_dark;
+    opacity: 0.75;
+  }
+
+  .slogan {
+    position: absolute;
+    z-index: 2;
+    color: $white;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    .title {
+      @include fontSize(32);
+    }
+    .subtitle {
+      @include fontSize(18)
+    }
+  }
+}
+
+.home-separator {
+  width: 100%;
+  height: 80px;
+  background-color: $blue_dark;
+  color: $blue_light;
+
+  &.stats {
+    text-align: right;
+    .cf-container {
+      padding-top: 28px;
+    }
+    .bold {
+      font-weight: bold;
+      margin-left: 15px;
+    }
+  }
+}

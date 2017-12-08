@@ -1,0 +1,49 @@
+.cf-navbar {
+  background-color: $white;
+  height: 90px;
+  width: 100%;
+  .logo {
+    display: inline-block;
+    margin-top: 19px;
+  }
+
+  a, a:visited, a:focus {
+    color: $blue_dark;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: $red_dark;
+    }
+  }
+
+  .menu {
+    display: inline-block;
+    ul {
+      margin: 0;
+      padding: 0;
+      margin-left: 40px;
+      li {
+        padding-left: 30px;
+        float: left;
+        list-style: none;
+      }
+    }
+  }
+
+  .search {
+    margin-top: 35px;
+    margin-right: 50px;
+    float: right;
+  }
+
+  .login {
+    margin-top: 35px;
+    float: right;
+
+    a, a:focus, a:visited {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}

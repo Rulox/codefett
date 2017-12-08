@@ -29,6 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+LOGIN_URL = '/login/'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # External apps
-    'braces',
+    'easy_thumbnails',
     'django_extensions',
     # Codefett APPs
     'common',
