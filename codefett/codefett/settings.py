@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Change in Production!!
-SECRET_KEY = 'iq@l(vnja-q%h+#b%$&2j-f%_bkk8(o2r2j$4xy0b(_31c!06j'
+SECRET_KEY = 'thissecretkeyisoverridenintheserver=)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,3 +138,15 @@ STATICFILES_DIRS = [
 
 # Using our custom user model
 AUTH_USER_MODEL = 'users.CFUser'
+
+#FIXME
+try:
+    from codefett.settings_dev import *
+except Exception:
+    pass
+
+if not DEBUG:
+    try:
+        from codefett.settings_prod import *
+    except Exception:
+        pass

@@ -12,6 +12,8 @@ bower_components
 *.pyc
 .coverage
 static
+settings_dev.py
+settings_prod.py
 
 # Misc
 virtualenv
