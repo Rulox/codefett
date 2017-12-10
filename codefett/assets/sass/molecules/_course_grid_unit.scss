@@ -1,0 +1,41 @@
+.course-detail-wrapper {
+  $radius: 8px;
+  @include gridle_gutter();
+  @include gridle (4);
+  .cf-course-detail {
+    background: $white;
+    border-radius: $radius;
+    padding: 0;
+    text-align: left;
+    .image > img {
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+      width: 100%;
+    }
+
+    .text {
+      padding: 20px;
+      a {
+        color: $blue_dark;
+      }
+      .title {
+        @include fontSize(12);
+        margin-bottom: 15px;
+        color: $blue_dark;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        direction:ltr;
+      }
+      .description {
+        line-height: 1.6;
+        min-height: 110px;
+        border-bottom: 1px solid $background;
+      }
+      .tags {
+        margin-top: 15px;
+      }
+    }
+  }
+}

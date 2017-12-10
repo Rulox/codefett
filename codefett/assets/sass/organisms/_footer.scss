@@ -1,0 +1,22 @@
+.cf-footer {
+  background-color: $white;
+  padding: 30px 0;
+  margin-bottom: 50px;
+
+  .license {
+    margin-top: 15px;
+    @include fontSize(8);
+    color: $blue_dark;
+  }
+  .title {
+    color: $blue_dark;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  a {
+    color: $blue_dark;
+    display: block;
+    margin-bottom: 8px;
+  }
+}

@@ -1,3 +1,4 @@
 django==1.11.7
 Pillow==4.2.1
 easy-thumbnails==2.5
+django-tagging==0.4.6

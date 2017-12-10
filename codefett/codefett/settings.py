@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # External apps
     'easy_thumbnails',
     'django_extensions',
+    'tagging',
     # Codefett APPs
     'common',
     'users',
@@ -135,6 +136,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 # Using our custom user model
 AUTH_USER_MODEL = 'users.CFUser'

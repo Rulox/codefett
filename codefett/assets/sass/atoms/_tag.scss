@@ -1,0 +1,13 @@
+.tag {
+  @include fontSize(8);
+  display: inline-block;
+  color: $blue_light;
+  border: 1px solid $gray_medium;
+  margin-right: 5px;
+  border-radius: 4px;
+  padding: 0 4px;
+  background-color: $background;
+  &:hover {
+    color: $blue_dark;
+  }
+}

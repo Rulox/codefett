@@ -1,0 +1,26 @@
+<div class="course-detail-wrapper">
+    <div class="cf-course-detail">
+
+        <a class="image" href="{% url 'course_detail' object.pk %}">
+            {% if object.image %}
+                <img src="{{ object.image.url }}">
+            {% else %}
+                noimage
+            {% endif %}
+        </a>
+
+    <div class="text">
+        <div class="title">
+            <a href="{% url 'course_detail' object.pk %}">{{ object.title }}</a>
+            </div>
+            <div class="description">
+                {{ object.description|truncatechars:150 }}
+            </div>
+        <div class="tags">
+            {% for tag in object.tags_as_list %}
+                <a href="#" class="tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</div>

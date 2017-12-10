@@ -21,12 +21,28 @@
         </div>
         <div class="home-separator stats">
             <div class="cf-container">
-                <span class="bold">12</span> Courses
-                <span class="bold">80+</span> Students
+                <span class="bold">{{ total_courses }}</span> Courses
+                <span class="bold"> {{ total_users }}+</span> Students
             </div>
         </div>
-        <div class="course-grid"></div>
+        <div class="course-grid">
+            <div class="cf-container">
+                <h2>
+                    Our last courses
+                </h2>
+                {% for course in courses %}
+                    {% include 'courses/_course_grid_unit.html' with object=course %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="how-it-works">
+            <div class="cf-container">
+                <h2>How it Works</h2>
+            </div>
+        </div>
         <div class="home-separator"></div>
+
     {% include 'common/_footer.html' %}
     </div>
 {% endblock body %}

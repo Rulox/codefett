@@ -7,6 +7,8 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic import FormView, RedirectView
+from courses.models import Course
+from users.models import CFUser
 
 
 def home(request):
@@ -20,7 +22,12 @@ def home(request):
         }
         return render(request, 'common/dashboard.html', context)
     else:
-        return render(request, 'common/home.html')
+        context = {
+            'courses': Course.objects.filter(privacy=0).order_by('start_date')[:3],
+            'total_courses': Course.objects.all().count(),
+            'total_users': CFUser.objects.all().count(),
+        }
+        return render(request, 'common/home.html', context)
 
 
 class LoginView(FormView):

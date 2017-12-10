@@ -1,5 +1,30 @@
+/* GENERAL */
+$max-width: 1140px;
+
 /* EXTERNAL */
-@import '../node_modules/susy/sass/susy';
+@import '../node_modules/gridle/sass/gridle/gridle';
+@include gridle_setup( (
+    context : 12,
+    gutter-width : 20px,
+    direction : ltr,
+    gutter-left   : 10px,   // size of left gutter
+    gutter-right  : 10px,   // size of right gutter
+) );
+
+@import '../node_modules/gridle/sass/gridle/settings';
+
+// generate classes :
+@include gridle_generate_classes ( );
+
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: $max-width,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box
+);
+
 
 /* UTILS */
 @import 'utils/mixins';
@@ -11,21 +36,30 @@
 
 
 /* ATOMS */
-
+@import 'atoms/button';
+@import 'atoms/tag';
 /* MOLECULES */
 @import 'molecules/navbar';
 @import 'molecules/hero';
+@import 'molecules/course_grid_unit';
 
 /* ORGANISMS */
 @import 'organisms/course_grid';
+@import 'organisms/how_it_works';
+@import 'organisms/footer';
 
-/* GENERAL */
-$max-width: 1140px;
+
 
 .cf-container {
   max-width: $max-width;
   margin: 0 auto;
   display: block;
+}
+
+.home {
+  margin-top: 85px;
+  background-color: $background;
+
 }
 
 html,
@@ -38,4 +72,19 @@ body {
 
 a, a:hover, a:focus, a:visited {
   color: $color_link;
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 48px;
+  @include fontSize(18);
+  font-weight: bold;
+  color: $blue_dark;
+}
+
+h2 {
+  margin-bottom: 40px;
+  @include fontSize(18);
+  font-weight: bold;
+  color: $blue_dark;
 }

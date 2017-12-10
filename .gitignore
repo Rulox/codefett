@@ -12,6 +12,7 @@ bower_components
 *.pyc
 .coverage
 static
+media
 settings_dev.py
 settings_prod.py
 

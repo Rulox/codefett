@@ -1,8 +1,7 @@
-from __future__ import unicode_literals
-import zipfile
 from django.utils.translation import ugettext as _
 from django.db import models
-from django.db.models.signals import post_save
+from tagging.fields import TagField
+from tagging.registry import register
 from users.models import CFUser
 from plugins.models import Plugin
 
@@ -42,9 +41,15 @@ class Course(models.Model):
     limit = models.IntegerField(verbose_name=_('Max number of students'), default=STUDENTS_LIMIT_DEFAULT)
     students = models.ManyToManyField(CFUser, through='Enrollment')
     example_project = models.FileField(upload_to='projects', blank=True, null=True)
+    tags = TagField()
+
+    @property
+    def tags_as_list(self):
+        return self.tags.split(',')
 
     def __str__(self):
         return '{} ({} students)'.format(self.title, self.students.count())
+
 
 
 class Enrollment(models.Model):
