@@ -7,7 +7,7 @@ var browserify = require('browserify'),
     buffer = require('vinyl-buffer');
 
 var entryPoint = './js/main.js',
-    imagesPath = './images/*',
+    imagesPath = './images/**/*',
     sassWatchPath = './sass/**/*.scss',
     jsWatchPath = './js/**/*.js',
     destPath = '../static/';
